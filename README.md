@@ -15,6 +15,7 @@ Paquetes de contenido por área (figuras, fórmulas LaTeX, etiquetas y emojis) q
 | Economía, finanzas y administración | Licenciaturas |
 | Arquitectura y dibujo técnico | Licenciaturas |
 | Psicología y ciencias sociales | Licenciaturas |
+| Música | Licenciaturas |
 
 ## Formato `.wgpack`
 

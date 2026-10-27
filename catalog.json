@@ -210,6 +210,27 @@
    "sha256": "d193e63f6aa9868190ebc01fe99abfba5c63da7957ccbb99dbc7932846779992",
    "name_en": "Psychology and social sciences",
    "description_en": "Statistical graphs, models and diagrams, and formulas for descriptive and inferential statistics, psychometrics and demography."
+  },
+  {
+   "format": 1,
+   "id": "musica",
+   "name": "Música",
+   "description": "Notación (claves, notas, silencios, compases), instrumentos, tablaturas, teoría y acústica con plantillas de pentagrama y fórmulas.",
+   "area": "Licenciaturas",
+   "icon": "🎼",
+   "version": 1,
+   "counts": {
+    "figures": 61,
+    "formulas": 28,
+    "stickers": 44,
+    "templates": 6,
+    "symbols": 24
+   },
+   "file": "packs/musica.wgpack",
+   "size": 35208,
+   "sha256": "5d1e2c688d1d3ce12e7338c18ac3edcd30a0b6a2633fdc7191fe3db74130a181",
+   "name_en": "Music",
+   "description_en": "Notation (clefs, notes, rests, time signatures), instruments, tablature, theory and acoustics with staff templates and formulas."
   }
  ]
 }

@@ -89,6 +89,20 @@ class Fig:
             pts += [cu + r * math.cos(a), cv + r * math.sin(a)]
         self.poly(*pts, fill=fill)
 
+    def spline(self, pts, n=10, dashed=False, closed=False):
+        """Curva suave (Catmull-Rom) que pasa por [pts] = [(u, v), …]."""
+        P = list(pts)
+        if closed: P = [P[-1]] + P + [P[0], P[1]]
+        else: P = [P[0]] + P + [P[-1]]
+        out = []
+        for i in range(1, len(P) - 2):
+            p0, p1, p2, p3 = P[i - 1], P[i], P[i + 1], P[i + 2]
+            for k in range(n):
+                t = k / n; t2 = t * t; t3 = t2 * t
+                out.append(tuple(0.5 * ((2 * p1[j]) + (-p0[j] + p2[j]) * t + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * t2 + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * t3) for j in (0, 1)))
+        out.append(tuple(P[-2]))
+        self._add(out, dashed=dashed)
+
     def label(self, u, v, text, scale=1.0):
         self.labels.append([round(u, 4), round(v, 4), text, scale])
 
