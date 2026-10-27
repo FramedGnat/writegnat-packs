@@ -1,0 +1,195 @@
+{
+ "format": 1,
+ "packs": [
+  {
+   "format": 1,
+   "id": "fisica",
+   "name": "Física",
+   "description": "Mecánica, ondas, óptica, electromagnetismo, termodinámica y física moderna: diagramas y formulario.",
+   "area": "Ciencias",
+   "icon": "⚛️",
+   "version": 1,
+   "counts": {
+    "figures": 42,
+    "formulas": 88,
+    "stickers": 26
+   },
+   "file": "packs/fisica.wgpack",
+   "size": 26363,
+   "sha256": "b92708fb586d3f0a3c0d24786f1d645cd6ce47c9fcfd3581986773d27b7f0b84",
+   "name_en": "Physics",
+   "description_en": "Mechanics, waves, optics, electromagnetism, thermodynamics and modern physics: diagrams and formula sheet."
+  },
+  {
+   "format": 1,
+   "id": "quimica",
+   "name": "Química",
+   "description": "Material de laboratorio, estructuras moleculares, orbitales y formulario de estequiometría, gases, termoquímica, cinética, equilibrio y electroquímica.",
+   "area": "Ciencias",
+   "icon": "🧪",
+   "version": 1,
+   "counts": {
+    "figures": 38,
+    "formulas": 49,
+    "stickers": 28
+   },
+   "file": "packs/quimica.wgpack",
+   "size": 16592,
+   "sha256": "f43595ea136eae69ed372724e6a4b8185696bea59c36068db0616d7154e18934",
+   "name_en": "Chemistry",
+   "description_en": "Lab equipment, molecular structures, orbitals and formulas for stoichiometry, gases, thermochemistry, kinetics, equilibrium and electrochemistry."
+  },
+  {
+   "format": 1,
+   "id": "biologia-salud",
+   "name": "Biología y salud",
+   "description": "Células, ADN, órganos y sistemas, microbiología y formulario de genética, ecología, fisiología, farmacología y epidemiología.",
+   "area": "Ciencias",
+   "icon": "🧬",
+   "version": 1,
+   "counts": {
+    "figures": 23,
+    "formulas": 36,
+    "stickers": 32
+   },
+   "file": "packs/biologia-salud.wgpack",
+   "size": 25066,
+   "sha256": "60715ccea5dd84e883c3b5cc5b3a97791a704fce3043ad672ab7320f622a4c5f",
+   "name_en": "Biology and health",
+   "description_en": "Cells, DNA, organs and systems, microbiology and formulas for genetics, ecology, physiology, pharmacology and epidemiology."
+  },
+  {
+   "format": 1,
+   "id": "electronica",
+   "name": "Electrónica y eléctrica",
+   "description": "Símbolos de circuitos, compuertas lógicas, instrumentos y formulario de circuitos, AC, analógica, digital y potencia.",
+   "area": "Ingenierías",
+   "icon": "⚡",
+   "version": 1,
+   "counts": {
+    "figures": 64,
+    "formulas": 52,
+    "stickers": 22
+   },
+   "file": "packs/electronica.wgpack",
+   "size": 11931,
+   "sha256": "5f5b5a36e05f53b9c4ffcc47f1cc69202182acbf02b2b030e9a9d01a5c19a8b2",
+   "name_en": "Electronics and electrical",
+   "description_en": "Circuit symbols, logic gates, instruments and formulas for circuits, AC, analog, digital and power."
+  },
+  {
+   "format": 1,
+   "id": "robotica",
+   "name": "Robótica y mecatrónica",
+   "description": "Articulaciones, brazos editables, robots móviles, sensores, transmisiones y formulario de cinemática, dinámica y control.",
+   "area": "Ingenierías",
+   "icon": "🤖",
+   "version": 1,
+   "counts": {
+    "figures": 46,
+    "formulas": 44,
+    "stickers": 24
+   },
+   "file": "packs/robotica.wgpack",
+   "size": 24115,
+   "sha256": "e652fefedcabf51e58b0decd4b160c17d054d1e4b21b2dc7e4c188347ccf2377",
+   "name_en": "Robotics and mechatronics",
+   "description_en": "Joints, editable arms, mobile robots, sensors, transmissions and formulas for kinematics, dynamics and control."
+  },
+  {
+   "format": 1,
+   "id": "civil",
+   "name": "Ingeniería civil",
+   "description": "Apoyos, vigas, cargas, armaduras, secciones, suelos e hidráulica, con formulario de estructuras, materiales, hidráulica y geotecnia.",
+   "area": "Ingenierías",
+   "icon": "🏗️",
+   "version": 1,
+   "counts": {
+    "figures": 32,
+    "formulas": 45,
+    "stickers": 23
+   },
+   "file": "packs/civil.wgpack",
+   "size": 11415,
+   "sha256": "051cb2a4704298059032602721b3fe51981e792a2f007d5d6b06a1f5fba4038e",
+   "name_en": "Civil engineering",
+   "description_en": "Supports, beams, loads, trusses, sections, soils and hydraulics, with formulas for structures, materials, hydraulics and geotechnics."
+  },
+  {
+   "format": 1,
+   "id": "industrial-computacion",
+   "name": "Industrial y computación",
+   "description": "UML, redes, estructuras de datos, procesos y calidad, con formulario de operaciones, calidad, algoritmos, IA y redes.",
+   "area": "Ingenierías",
+   "icon": "💻",
+   "version": 1,
+   "counts": {
+    "figures": 45,
+    "formulas": 44,
+    "stickers": 28
+   },
+   "file": "packs/industrial-computacion.wgpack",
+   "size": 19163,
+   "sha256": "5ac931a9e90d0e8c46eebb0ac777f5629abd15191854b43714a8a8a5709ffbab",
+   "name_en": "Industrial and computing",
+   "description_en": "UML, networks, data structures, processes and quality, with formulas for operations, quality, algorithms, AI and networking."
+  },
+  {
+   "format": 1,
+   "id": "economia-finanzas",
+   "name": "Economía, finanzas y administración",
+   "description": "Gráficas económicas, diagramas de negocio y formulario de micro y macroeconomía, finanzas, contabilidad, mercadotecnia y estadística aplicada.",
+   "area": "Licenciaturas",
+   "icon": "📈",
+   "version": 1,
+   "counts": {
+    "figures": 21,
+    "formulas": 60,
+    "stickers": 28
+   },
+   "file": "packs/economia-finanzas.wgpack",
+   "size": 12316,
+   "sha256": "bf062bb07d46e045e88b2e83b7f540d8a08d338a42f673db26a9bd401641fbde",
+   "name_en": "Economics, finance and business",
+   "description_en": "Economic graphs, business diagrams and formulas for micro and macroeconomics, finance, accounting, marketing and applied statistics."
+  },
+  {
+   "format": 1,
+   "id": "arquitectura",
+   "name": "Arquitectura y dibujo técnico",
+   "description": "Símbolos de planos, mobiliario, cotas, vistas y formulario de diseño, iluminación, acústica y confort térmico.",
+   "area": "Licenciaturas",
+   "icon": "📐",
+   "version": 1,
+   "counts": {
+    "figures": 37,
+    "formulas": 15,
+    "stickers": 26
+   },
+   "file": "packs/arquitectura.wgpack",
+   "size": 8747,
+   "sha256": "64d97802f5c86a54087ac87145ada6a4c4e5c7cd4cfb26f7fd3beea092ef7b1c",
+   "name_en": "Architecture and technical drawing",
+   "description_en": "Floor plan symbols, furniture, dimensions, views and formulas for design, lighting, acoustics and thermal comfort."
+  },
+  {
+   "format": 1,
+   "id": "psicologia-sociales",
+   "name": "Psicología y ciencias sociales",
+   "description": "Gráficas estadísticas, modelos y esquemas, y formulario de estadística descriptiva e inferencial, psicometría y demografía.",
+   "area": "Licenciaturas",
+   "icon": "🧠",
+   "version": 1,
+   "counts": {
+    "figures": 18,
+    "formulas": 34,
+    "stickers": 26
+   },
+   "file": "packs/psicologia-sociales.wgpack",
+   "size": 17510,
+   "sha256": "77533b8880df871aa5c269c44881a26512dbb63092a4524071042af192d260e9",
+   "name_en": "Psychology and social sciences",
+   "description_en": "Statistical graphs, models and diagrams, and formulas for descriptive and inferential statistics, psychometrics and demography."
+  }
+ ]
+}
