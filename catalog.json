@@ -8,15 +8,17 @@
    "description": "Mecánica, ondas, óptica, electromagnetismo, termodinámica y física moderna: diagramas y formulario.",
    "area": "Ciencias",
    "icon": "⚛️",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 42,
     "formulas": 88,
-    "stickers": 26
+    "stickers": 33,
+    "templates": 3,
+    "symbols": 30
    },
    "file": "packs/fisica.wgpack",
-   "size": 26363,
-   "sha256": "b92708fb586d3f0a3c0d24786f1d645cd6ce47c9fcfd3581986773d27b7f0b84",
+   "size": 33862,
+   "sha256": "ddf764c8e724f3694b92393a1e221cc9694106a1cfae7c8ded87a19de9ed1d3b",
    "name_en": "Physics",
    "description_en": "Mechanics, waves, optics, electromagnetism, thermodynamics and modern physics: diagrams and formula sheet."
   },
@@ -27,15 +29,17 @@
    "description": "Material de laboratorio, estructuras moleculares, orbitales y formulario de estequiometría, gases, termoquímica, cinética, equilibrio y electroquímica.",
    "area": "Ciencias",
    "icon": "🧪",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 38,
     "formulas": 49,
-    "stickers": 28
+    "stickers": 38,
+    "templates": 3,
+    "symbols": 28
    },
    "file": "packs/quimica.wgpack",
-   "size": 16592,
-   "sha256": "f43595ea136eae69ed372724e6a4b8185696bea59c36068db0616d7154e18934",
+   "size": 32974,
+   "sha256": "781215782f75f028ffe6940b01c343c49797406fe551db99dac760ddece1806d",
    "name_en": "Chemistry",
    "description_en": "Lab equipment, molecular structures, orbitals and formulas for stoichiometry, gases, thermochemistry, kinetics, equilibrium and electrochemistry."
   },
@@ -46,15 +50,17 @@
    "description": "Células, ADN, órganos y sistemas, microbiología y formulario de genética, ecología, fisiología, farmacología y epidemiología.",
    "area": "Ciencias",
    "icon": "🧬",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 23,
     "formulas": 36,
-    "stickers": 32
+    "stickers": 38,
+    "templates": 3,
+    "symbols": 21
    },
    "file": "packs/biologia-salud.wgpack",
-   "size": 25066,
-   "sha256": "60715ccea5dd84e883c3b5cc5b3a97791a704fce3043ad672ab7320f622a4c5f",
+   "size": 30462,
+   "sha256": "2fc236ff3ad3e0793ae6815fd381a3bcdea9a06e3c6e398ec03c4a5c596929ff",
    "name_en": "Biology and health",
    "description_en": "Cells, DNA, organs and systems, microbiology and formulas for genetics, ecology, physiology, pharmacology and epidemiology."
   },
@@ -65,15 +71,17 @@
    "description": "Símbolos de circuitos, compuertas lógicas, instrumentos y formulario de circuitos, AC, analógica, digital y potencia.",
    "area": "Ingenierías",
    "icon": "⚡",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 64,
     "formulas": 52,
-    "stickers": 22
+    "stickers": 29,
+    "templates": 3,
+    "symbols": 26
    },
    "file": "packs/electronica.wgpack",
-   "size": 11931,
-   "sha256": "5f5b5a36e05f53b9c4ffcc47f1cc69202182acbf02b2b030e9a9d01a5c19a8b2",
+   "size": 44283,
+   "sha256": "a7f1512842420c7572daff03d007488fb0162f2bfaf2dab5dfcb3318c42f3345",
    "name_en": "Electronics and electrical",
    "description_en": "Circuit symbols, logic gates, instruments and formulas for circuits, AC, analog, digital and power."
   },
@@ -84,15 +92,17 @@
    "description": "Articulaciones, brazos editables, robots móviles, sensores, transmisiones y formulario de cinemática, dinámica y control.",
    "area": "Ingenierías",
    "icon": "🤖",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 46,
     "formulas": 44,
-    "stickers": 24
+    "stickers": 30,
+    "templates": 3,
+    "symbols": 26
    },
    "file": "packs/robotica.wgpack",
-   "size": 24115,
-   "sha256": "e652fefedcabf51e58b0decd4b160c17d054d1e4b21b2dc7e4c188347ccf2377",
+   "size": 29668,
+   "sha256": "5c72180a28292599ccd35fadd37d1ff1b4cef1385bb2524ade9bba370d921cbd",
    "name_en": "Robotics and mechatronics",
    "description_en": "Joints, editable arms, mobile robots, sensors, transmissions and formulas for kinematics, dynamics and control."
   },
@@ -103,15 +113,17 @@
    "description": "Apoyos, vigas, cargas, armaduras, secciones, suelos e hidráulica, con formulario de estructuras, materiales, hidráulica y geotecnia.",
    "area": "Ingenierías",
    "icon": "🏗️",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 32,
     "formulas": 45,
-    "stickers": 23
+    "stickers": 29,
+    "templates": 3,
+    "symbols": 23
    },
    "file": "packs/civil.wgpack",
-   "size": 11415,
-   "sha256": "051cb2a4704298059032602721b3fe51981e792a2f007d5d6b06a1f5fba4038e",
+   "size": 14940,
+   "sha256": "ff15fb5067c4a07787c529aafcffb7160a0dca10b967f30ef88fb6737202ccac",
    "name_en": "Civil engineering",
    "description_en": "Supports, beams, loads, trusses, sections, soils and hydraulics, with formulas for structures, materials, hydraulics and geotechnics."
   },
@@ -122,15 +134,17 @@
    "description": "UML, redes, estructuras de datos, procesos y calidad, con formulario de operaciones, calidad, algoritmos, IA y redes.",
    "area": "Ingenierías",
    "icon": "💻",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 45,
     "formulas": 44,
-    "stickers": 28
+    "stickers": 35,
+    "templates": 3,
+    "symbols": 41
    },
    "file": "packs/industrial-computacion.wgpack",
-   "size": 19163,
-   "sha256": "5ac931a9e90d0e8c46eebb0ac777f5629abd15191854b43714a8a8a5709ffbab",
+   "size": 27719,
+   "sha256": "771aa2caf31c5587c267c73fa1fff5acccf2dcc3478b26b2b393b783cb5c397b",
    "name_en": "Industrial and computing",
    "description_en": "UML, networks, data structures, processes and quality, with formulas for operations, quality, algorithms, AI and networking."
   },
@@ -141,15 +155,17 @@
    "description": "Gráficas económicas, diagramas de negocio y formulario de micro y macroeconomía, finanzas, contabilidad, mercadotecnia y estadística aplicada.",
    "area": "Licenciaturas",
    "icon": "📈",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 21,
     "formulas": 60,
-    "stickers": 28
+    "stickers": 35,
+    "templates": 3,
+    "symbols": 22
    },
    "file": "packs/economia-finanzas.wgpack",
-   "size": 12316,
-   "sha256": "bf062bb07d46e045e88b2e83b7f540d8a08d338a42f673db26a9bd401641fbde",
+   "size": 15406,
+   "sha256": "8e37b19549687c4f452d8ef02a78606a91057679977647059a0e5aea711cf133",
    "name_en": "Economics, finance and business",
    "description_en": "Economic graphs, business diagrams and formulas for micro and macroeconomics, finance, accounting, marketing and applied statistics."
   },
@@ -160,15 +176,17 @@
    "description": "Símbolos de planos, mobiliario, cotas, vistas y formulario de diseño, iluminación, acústica y confort térmico.",
    "area": "Licenciaturas",
    "icon": "📐",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 37,
     "formulas": 15,
-    "stickers": 26
+    "stickers": 32,
+    "templates": 3,
+    "symbols": 18
    },
    "file": "packs/arquitectura.wgpack",
-   "size": 8747,
-   "sha256": "64d97802f5c86a54087ac87145ada6a4c4e5c7cd4cfb26f7fd3beea092ef7b1c",
+   "size": 15156,
+   "sha256": "ccc166e03b8751bdc986bfc6ca52fc1e928f889ed4a45c2656f0884974ba21d8",
    "name_en": "Architecture and technical drawing",
    "description_en": "Floor plan symbols, furniture, dimensions, views and formulas for design, lighting, acoustics and thermal comfort."
   },
@@ -179,15 +197,17 @@
    "description": "Gráficas estadísticas, modelos y esquemas, y formulario de estadística descriptiva e inferencial, psicometría y demografía.",
    "area": "Licenciaturas",
    "icon": "🧠",
-   "version": 1,
+   "version": 2,
    "counts": {
     "figures": 18,
     "formulas": 34,
-    "stickers": 26
+    "stickers": 32,
+    "templates": 3,
+    "symbols": 23
    },
    "file": "packs/psicologia-sociales.wgpack",
-   "size": 17510,
-   "sha256": "77533b8880df871aa5c269c44881a26512dbb63092a4524071042af192d260e9",
+   "size": 22447,
+   "sha256": "d193e63f6aa9868190ebc01fe99abfba5c63da7957ccbb99dbc7932846779992",
    "name_en": "Psychology and social sciences",
    "description_en": "Statistical graphs, models and diagrams, and formulas for descriptive and inferential statistics, psychometrics and demography."
   }

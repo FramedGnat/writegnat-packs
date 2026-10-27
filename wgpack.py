@@ -102,6 +102,95 @@ class Fig:
         self._add(pts)
 
 
+GUIDE, SOFT, LABEL = "#9ca3af", "#d4d4d8", "#6b7280"
+
+
+class Art:
+    """Dibujo en pt (y hacia abajo): plantillas de página y stickers de color."""
+
+    def __init__(self, w, h):
+        self.w = w; self.h = h; self.parts = []; self.texts = []
+
+    def _add(self, pts, color, width, fill=False, dashed=False):
+        flat = []
+        for x, y in pts: flat += [round(x, 2), round(y, 2)]
+        part = {"p": flat, "c": color, "w": width}
+        if fill: part["f"] = 1
+        if dashed: part["d"] = 1
+        self.parts.append(part)
+
+    def line(self, *c, color=GUIDE, w=0.85, dashed=False):
+        self._add(list(zip(c[0::2], c[1::2])), color, w, dashed=dashed)
+
+    def poly(self, *c, color=GUIDE, w=0.85, fill=False):
+        pts = list(zip(c[0::2], c[1::2])); self._add(pts + [pts[0]], color, w, fill)
+
+    def rect(self, x0, y0, x1, y1, color=GUIDE, w=0.85, fill=False, dashed=False):
+        self._add([(x0, y0), (x1, y0), (x1, y1), (x0, y1), (x0, y0)], color, w, fill, dashed)
+
+    def round_rect(self, x0, y0, x1, y1, r, color=GUIDE, w=0.85, fill=False):
+        pts = []
+        for cx, cy, a0 in ((x1 - r, y0 + r, -90), (x1 - r, y1 - r, 0), (x0 + r, y1 - r, 90), (x0 + r, y0 + r, 180)):
+            for k in range(7): a = math.radians(a0 + 15 * k); pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+        self._add(pts + [pts[0]], color, w, fill)
+
+    def circle(self, cx, cy, r, color=GUIDE, w=0.85, fill=False, ry=None):
+        ry = r if ry is None else ry
+        self._add([(cx + r * math.cos(2 * math.pi * k / 40), cy + ry * math.sin(2 * math.pi * k / 40)) for k in range(41)], color, w, fill)
+
+    def text(self, x, y, t, size=9.0, color=LABEL):
+        self.texts.append([round(x, 2), round(y, 2), t, size, color])
+
+    def ruled(self, x0, y0, x1, y1, step=22.0):
+        y = y0 + step
+        while y <= y1 - 4: self.line(x0, y, x1, y, color=SOFT, w=0.5); y += step
+
+    def grid(self, x0, y0, x1, y1, step=14.17, color=SOFT, w=0.4):
+        x = x0
+        while x <= x1 + 0.01: self.line(x, y0, x, y1, color=color, w=w); x += step
+        y = y0
+        while y <= y1 + 0.01: self.line(x0, y, x1, y, color=color, w=w); y += step
+
+    def dots(self, x0, y0, x1, y1, step=14.17):
+        y = y0
+        while y <= y1 + 0.01:
+            x = x0
+            # Un punto = trazo diminuto con punta redonda (mucho más ligero que un círculo).
+            while x <= x1 + 0.01: self._add([(x, y), (x + 0.05, y)], GUIDE, 1.1); x += step
+            y += step
+
+    def fields(self, x0, y, x1, names, size=9.0):
+        """Fila de campos «Nombre: ____» repartidos de x0 a x1."""
+        cw = (x1 - x0) / len(names)
+        for i, n in enumerate(names):
+            x = x0 + i * cw; self.text(x, y - size * 1.2, n + ":", size); self.line(x + len(n) * size * 0.55 + 8, y, x + cw - 10, y, w=0.6)
+
+    def title(self, x, y, t, size=16.0):
+        self.text(x, y, t, size, "#4b5563")
+
+    def table(self, x0, y0, x1, y1, cols, rows, headers=None, header_h=20.0):
+        """cols: anchos relativos; rows: filas de datos (sin contar la cabecera)."""
+        self.rect(x0, y0, x1, y1, w=0.9)
+        tot = sum(cols); x = x0
+        for i, c in enumerate(cols):
+            if headers: self.text(x + 4, y0 + 5, headers[i], 8.5)
+            x += (x1 - x0) * c / tot
+            if i < len(cols) - 1: self.line(x, y0, x, y1, w=0.6)
+        top = y0 + (header_h if headers else 0)
+        if headers: self.line(x0, top, x1, top, w=0.9)
+        rh = (y1 - top) / max(1, rows)
+        for r in range(1, rows): self.line(x0, top + r * rh, x1, top + r * rh, color=SOFT, w=0.5)
+
+    def section(self, x0, y0, x1, y1, name, ruled=True):
+        self.rect(x0, y0, x1, y1, w=0.7); self.text(x0 + 5, y0 + 4, name, 9.0)
+        if ruled: self.ruled(x0 + 6, y0 + 10, x1 - 6, y1)
+
+    def to_json(self, sid, name):
+        d = {"id": sid, "name": name, "w": self.w, "h": self.h, "parts": self.parts}
+        if self.texts: d["texts"] = self.texts
+        return d
+
+
 class Pack:
     def __init__(self, pid, name, description, area, icon, version=1, en=None):
         self.id = pid; self.name = name; self.description = description; self.area = area
@@ -111,6 +200,10 @@ class Pack:
         self.labels = []        # [texto, "#rrggbb"]
         self.emoji = {}         # categoría → "😀 😁 …"
         self.en = dict(en or {})
+        self.templates = []     # Art (hoja A4 en pt) para «Plantillas · paquete»
+        self.stickers = []      # Art de color
+        self.symbols = []       # {"category", "items": [latex]}
+        self.snap = set()       # categorías de figuras que se pegan a la rejilla (circuitos)
 
     def figure(self, category, fid, name, en=None, robot=None):
         """Decorador: la función recibe un Fig y lo dibuja."""
@@ -129,6 +222,25 @@ class Pack:
         self.figures.setdefault(category, []).append({"id": fid, "name": name, "parts": [], "robot": joints})
         if en: self.en[name] = en
 
+    def template(self, tid, name, en=None, w=595.0, h=842.0):
+        """Decorador: la función dibuja en un Art del tamaño de la hoja (A4 vertical por defecto)."""
+        def deco(fn):
+            a = Art(w, h); fn(a); self.templates.append(a.to_json(tid, name))
+            if en: self.en[name] = en
+            return fn
+        return deco
+
+    def sticker(self, sid, name, en=None, w=60.0, h=60.0):
+        def deco(fn):
+            a = Art(w, h); fn(a); self.stickers.append(a.to_json(sid, name))
+            if en: self.en[name] = en
+            return fn
+        return deco
+
+    def symbols_in(self, category, items, en=None):
+        self.symbols.append({"category": category, "items": items.split() if isinstance(items, str) else items})
+        if en: self.en[category] = en
+
     def formulas_in(self, group, category, items, en_category=None):
         """items: [(nombre, latex) | (nombre, latex, nombre_en)]."""
         out = []
@@ -142,7 +254,9 @@ class Pack:
         return {
             "figures": sum(len(v) for v in self.figures.values()),
             "formulas": sum(len(c["items"]) for c in self.formulas),
-            "stickers": len(self.labels) + sum(len(v.split()) for v in self.emoji.values()),
+            "stickers": len(self.labels) + len(self.stickers) + sum(len(v.split()) for v in self.emoji.values()),
+            "templates": len(self.templates),
+            "symbols": sum(len(s["items"]) for s in self.symbols),
         }
 
     def write(self, out_dir):
@@ -151,10 +265,13 @@ class Pack:
         manifest = {"format": FORMAT, "id": self.id, "name": self.name, "description": self.description,
                     "area": self.area, "icon": self.icon, "version": self.version, "counts": self.counts()}
         content = {
-            "figures": [{"category": c, "items": items} for c, items in self.figures.items()],
+            "figures": [dict({"category": c, "items": items}, **({"snap": True} if c in self.snap else {})) for c, items in self.figures.items()],
             "formulas": self.formulas,
             "labels": self.labels,
             "emoji": [{"category": c, "items": s.split()} for c, s in self.emoji.items()],
+            "templates": self.templates,
+            "stickers": self.stickers,
+            "symbols": self.symbols,
         }
         path = os.path.join(out_dir, f"{self.id}.wgpack")
         # Zip determinista: misma fecha y orden, así el SHA-256 sólo cambia si cambia el contenido.
