@@ -231,6 +231,48 @@
    "sha256": "5d1e2c688d1d3ce12e7338c18ac3edcd30a0b6a2633fdc7191fe3db74130a181",
    "name_en": "Music",
    "description_en": "Notation (clefs, notes, rests, time signatures), instruments, tablature, theory and acoustics with staff templates and formulas."
+  },
+  {
+   "format": 1,
+   "id": "robots",
+   "name": "Robots y máquinas",
+   "description": "26 robots con personalidad: amigos, cíclopes, drones, rovers, brazos, perros robot y cuadrúpedos, listos para decorar tus apuntes.",
+   "area": "General",
+   "icon": "🤖",
+   "version": 1,
+   "counts": {
+    "figures": 0,
+    "formulas": 0,
+    "stickers": 26,
+    "templates": 0,
+    "symbols": 0
+   },
+   "file": "packs/robots.wgpack",
+   "size": 48731,
+   "sha256": "71dd02327b8d17da69cd37340d0e7c8f9d8048a440f21ac85d11ab4ef07293cf",
+   "name_en": "Robots and machines",
+   "description_en": "26 robots with personality: friends, cyclops, drones, rovers, arms, robot dogs and quadrupeds, ready to decorate your notes."
+  },
+  {
+   "format": 1,
+   "id": "mascotas",
+   "name": "Compañeros de estudio",
+   "description": "Objetos con cara por carrera y de uso diario: matraz, átomo, célula, cerebro, casco, chip, libro, calculadora, cohete y más.",
+   "area": "General",
+   "icon": "😊",
+   "version": 1,
+   "counts": {
+    "figures": 0,
+    "formulas": 0,
+    "stickers": 27,
+    "templates": 0,
+    "symbols": 0
+   },
+   "file": "packs/mascotas.wgpack",
+   "size": 43918,
+   "sha256": "e54af7ffe18400d8739f51d9a6135611fb187c4e9e0cd892d7ed0f48c4b95992",
+   "name_en": "Study buddies",
+   "description_en": "Characters by field and everyday study objects: flask, atom, cell, brain, hard hat, chip, book, calculator, rocket and more."
   }
  ]
 }
