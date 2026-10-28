@@ -184,18 +184,6 @@ def _(a):
     face(a, 40, 49, "dot", "smile", 5.4, 2.1, my=56, cheeks=False, col="#ffffff")
 
 
-@st("come-puntos", "Come-puntos", "Dot muncher")
-def _(a):
-    pts = [(36, 40)] + [(36 + 28 * math.cos(math.radians(t)), 40 + 28 * math.sin(math.radians(t))) for t in range(38, 323, 10)]
-    ps = []
-    for x, y in pts: ps += [x, y]
-    pg(a, *ps, fill="#fde047", w=1.9)
-    cc(a, 36, 23, 3.4, OL, w=0.4); a.circle(35, 22, 1.1, color="#ffffff", fill=True)
-    a.circle(20, 44, 3, color="#fb7185", fill=True, ry=2)
-    for x in (58, 68, 77): cc(a, x, 40, 2.6, "#fda4af", w=1.1)
-    shine(a, 24, 20, 3, 1.4)
-
-
 @st("control", "Control de videojuegos", "Game controller")
 def _(a):
     blob(a, rects=[(8, 22, 72, 52, 14)], circles=[(19, 54, 13), (61, 54, 13)], fill="#6366f1", w=3.4)

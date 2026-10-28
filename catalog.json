@@ -369,13 +369,13 @@
    "counts": {
     "figures": 0,
     "formulas": 0,
-    "stickers": 23,
+    "stickers": 22,
     "templates": 0,
     "symbols": 0
    },
    "file": "packs/deportes.wgpack",
-   "size": 38358,
-   "sha256": "8695411c63c4da728560ecc47048600249eac8d2e83e3b5047b777edd8c3ad05",
+   "size": 37022,
+   "sha256": "5c929aafd8df494e3f912f0c85bb853b6b0d4cd1d4e5f4ffa4f1dd9f44766789",
    "name_en": "Sports and games",
    "description_en": "Balls, medals, rackets, bikes, dice, cards, chess and video games with a face for your notes."
   },
