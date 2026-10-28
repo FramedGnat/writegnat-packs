@@ -7,7 +7,7 @@ import importlib.util, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-ORDER = ["fisica", "quimica", "biologia", "electronica", "robotica", "civil", "industrial", "economia", "arquitectura", "psicologia", "musica", "robots", "mascotas", "animales", "comida", "naturaleza", "espacio", "deportes", "transporte", "escuela", "marcadores"]
+ORDER = ["fisica", "quimica", "biologia", "electronica", "robotica", "civil", "industrial", "economia", "arquitectura", "psicologia", "musica", "robots", "mascotas", "animales", "comida", "naturaleza", "espacio", "deportes", "transporte", "escuela", "marcadores", "estilo"]
 
 sys.path.insert(0, os.path.join(HERE, "src"))
 

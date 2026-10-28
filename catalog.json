@@ -441,6 +441,27 @@
    "sha256": "ffbbb477e9d4b2a1db30e134e5a55b300e79d09ae7b210066acebe76ab0de680",
    "name_en": "Study markers",
    "description_en": "Stamps and marks for your notes: Important, Review, Exam, checks, arrows, braces, pennants, rating stars and more."
+  },
+  {
+   "format": 1,
+   "id": "estilo",
+   "name": "Estilo urbano y emo",
+   "description": "Corazones rotos, cadenas, murciélagos, calaveras lindas, mariposas Y2K, banners con frases y accesorios de estética emo y urbana.",
+   "area": "General",
+   "icon": "🖤",
+   "version": 1,
+   "counts": {
+    "figures": 0,
+    "formulas": 0,
+    "stickers": 33,
+    "templates": 0,
+    "symbols": 0
+   },
+   "file": "packs/estilo.wgpack",
+   "size": 38419,
+   "sha256": "22c1d65cbd1ae50423f51829111a03ba253f7b6b548367ef7699c2bcebb888b8",
+   "name_en": "Urban and emo style",
+   "description_en": "Broken hearts, chains, bats, cute skulls, Y2K butterflies, phrase banners and emo/urban accessories."
   }
  ]
 }
