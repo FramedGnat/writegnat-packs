@@ -7,7 +7,7 @@ import importlib.util, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-ORDER = ["fisica", "quimica", "biologia", "electronica", "robotica", "civil", "industrial", "economia", "arquitectura", "psicologia", "musica", "robots", "mascotas"]
+ORDER = ["fisica", "quimica", "biologia", "electronica", "robotica", "civil", "industrial", "economia", "arquitectura", "psicologia", "musica", "robots", "mascotas", "animales", "comida", "naturaleza", "espacio", "deportes", "transporte", "escuela", "marcadores"]
 
 sys.path.insert(0, os.path.join(HERE, "src"))
 
@@ -19,6 +19,11 @@ def load(name):
     if os.path.exists(extra):
         spec = importlib.util.spec_from_file_location(name + "_extra", extra)
         ext = importlib.util.module_from_spec(spec); spec.loader.exec_module(ext); ext.extend(mod.pack)
+    # Stickers con personalidad de la carrera (src/<nombre>_chars.py, si existe).
+    chars = os.path.join(HERE, "src", name + "_chars.py")
+    if os.path.exists(chars):
+        spec = importlib.util.spec_from_file_location(name + "_chars", chars)
+        ch = importlib.util.module_from_spec(spec); spec.loader.exec_module(ch); ch.extend(mod.pack); mod.pack.version += 1   # los stickers nuevos suben la versión del complemento
     return mod.pack
 
 out = os.path.join(HERE, "packs"); os.makedirs(out, exist_ok=True)
