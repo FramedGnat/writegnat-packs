@@ -90,3 +90,25 @@ def extend(P):
         cc(a, 63, 17, 3, "#fb923c", w=1.2)
         arc(a, 70, 10, 4, 100, 400, color="#94a3b8", w=1.6, n=10, ry=5)
         face(a, 22, 58, "dot", "smile", 4.6, 2, my=63, cheeks=False)
+
+    @st("onda", "Señal senoidal", "Sine wave")
+    def _(a):
+        rr(a, 6, 14, 74, 66, 8, "#0f172a")
+        ln(a, 12, 40, 68, 40, color="#334155", w=1)
+        a._add([(12 + 56 * k / 40, 40 - 14 * math.sin(2 * math.pi * 1.5 * k / 40)) for k in range(41)], "#4ade80", 2.4)
+        eyes(a, 40, 24, 8, 2.2, "glow", "#38bdf8"); arc(a, 40, 54, 5, 25, 155, color="#38bdf8", w=1.8)
+
+    @st("adc", "Convertidor A/D", "A/D converter")
+    def _(a):
+        rr(a, 18, 12, 62, 68, 6, "#1e293b")
+        for k in range(4):
+            ln(a, 12, 20 + k * 12, 18, 20 + k * 12, color="#d1d5db", w=3); ln(a, 62, 20 + k * 12, 68, 20 + k * 12, color="#d1d5db", w=3)
+        a.text(26, 15, "A/D", 10, "#fbbf24"); eyes(a, 40, 40, 7, 2.2, "glow", "#4ade80"); arc(a, 40, 50, 4, 25, 155, color="#4ade80", w=1.6)
+        a.text(25, 56, "0101", 8, "#94a3b8"); cc(a, 24, 18, 1.4, "#64748b", w=0.6)
+
+    @st("filtro", "Filtro de frecuencias", "Frequency filter")
+    def _(a):
+        rr(a, 8, 12, 72, 68, 8, "#f1f5f9"); ln(a, 14, 56, 66, 56, w=1.4); ln(a, 14, 56, 14, 18, w=1.4)
+        a._add([(16, 28), (36, 28), (46, 32), (54, 46), (66, 54)], "#6366f1", 2.6)
+        face(a, 36, 42, "dot", "smile", 6, 2, my=47, cheeks=False)
+        a.text(52, 18, "fc", 8, "#475569")

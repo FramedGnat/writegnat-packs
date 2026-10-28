@@ -24,6 +24,11 @@ def load(name):
     if os.path.exists(chars):
         spec = importlib.util.spec_from_file_location(name + "_chars", chars)
         ch = importlib.util.module_from_spec(spec); spec.loader.exec_module(ch); ch.extend(mod.pack); mod.pack.version += 1   # los stickers nuevos suben la versión del complemento
+    # Figuras de las materias de la carrera (src/<nombre>_figs.py, si existe).
+    figs = os.path.join(HERE, "src", name + "_figs.py")
+    if os.path.exists(figs):
+        spec = importlib.util.spec_from_file_location(name + "_figs", figs)
+        fg = importlib.util.module_from_spec(spec); spec.loader.exec_module(fg); fg.extend(mod.pack); mod.pack.version += 1
     return mod.pack
 
 out = os.path.join(HERE, "packs"); os.makedirs(out, exist_ok=True)

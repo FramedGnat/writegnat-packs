@@ -92,3 +92,25 @@ def extend(P):
         for k in range(8): rr(a, 22 + k * 5.6, 8, 25.6 + k * 5.6, 14, 0.6, "#fbbf24", w=0.8)
         for k in range(8): rr(a, 22 + k * 5.6, 66, 25.6 + k * 5.6, 72, 0.6, "#fbbf24", w=0.8)
         cc(a, 60, 24, 2, "#4ade80", w=0.8); cc(a, 60, 32, 2, "#fbbf24", w=0.8)
+
+    @st("pid", "Controlador PID", "PID controller")
+    def _(a):
+        rr(a, 8, 16, 72, 64, 8, "#e2e8f0"); rr(a, 8, 16, 72, 26, 5, "#6366f1", w=1.6)
+        for k, t in enumerate("PID"): rr(a, 13 + k * 20, 30, 29 + k * 20, 44, 3, ("#fb7185", "#fbbf24", "#4ade80")[k], w=1.3); a.text(18.5 + k * 20, 31, t, 10, "#1e293b")
+        face(a, 40, 53, "dot", "smile", 7, 2.2, my=58, cheeks=True)
+        a.text(14, 17, "Control", 6.5, "#ffffff")
+
+    @st("lazo", "Lazo de control", "Control loop")
+    def _(a):
+        arc(a, 40, 40, 26, 30, 330, color=OL, w=5.4, n=24); arc(a, 40, 40, 26, 30, 330, color="#38bdf8", w=3.2, n=24)
+        pg(a, 61, 22, 70, 30, 56, 32, fill="#38bdf8", w=1.3)
+        cc(a, 40, 40, 15, "#fde68a")
+        face(a, 40, 40, "dot", "smile", 6, 2.2, my=46, cheeks=True)
+
+    @st("encoder", "Encoder", "Encoder")
+    def _(a):
+        cc(a, 40, 40, 31, "#94a3b8"); cc(a, 40, 40, 24, "#f1f5f9", w=1.2)
+        for k in range(16):
+            r = math.radians(22.5 * k); ln(a, 40 + 24 * math.cos(r), 40 + 24 * math.sin(r), 40 + 29 * math.cos(r), 40 + 29 * math.sin(r), w=2)
+        face(a, 40, 38, "dot", "smile", 7, 2.4, my=44, cheeks=True)
+        pg(a, 66, 36, 76, 36, 76, 44, 66, 44, fill="#ef4444", w=1.3)
